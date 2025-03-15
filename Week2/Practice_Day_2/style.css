@@ -1,0 +1,14 @@
+.card-img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+.details-container{
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 50%;
+}
+
