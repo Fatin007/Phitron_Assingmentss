@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Contact</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #121212;
+            }
+            li {
+                float: left;
+            }
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            li a:hover {
+                background-color: #333;
+            }
+            a {
+                text-decoration: none;
+                color: black;
+            }
+            a:hover {
+                color: blue;
+            }
+            .active {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/first_app/services/">Services</a></li>
+            <li><a href="/first_app/about/">About</a></li>
+            <li><a href="/first_app/contact/" class="active">Contact</a></li>
+        </ul>
+
+        <p>{{ list_ppl | dictsort:"age" }}</p> <br><br>
+        {% for person in list_ppl %}
+            <p>Name: {{ person.name }}</p>
+            <p>Age: {{ person.age }}</p> <br>
+        {% endfor %}
+        
+        <p>{{ fruits | first | capfirst}}</p>
+        <p>{{ fruits | length }}</p>
+        <p>{{ fruits | random }}</p>
+        <p>{{ fruits | slice:":2" }}</p>
+        <p>{{ fruits | unordered_list | linebreaksbr }}</p><br><br>
+
+        <p>{{ 'I Am Master Yoda' | lower }}</p>
+        <p>{{ 'I Am Master Yoda' | upper }}</p>
+        <p>{{ 'Django rest framework' | title }}</p><br><br>
+
+        <p>{{ time | time:"H:i" }} </p>
+        <p>{{ time | time:"h:i A" }} </p>
+
+        <script src="" async defer></script>
+    </body>
+</html>

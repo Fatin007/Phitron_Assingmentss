@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Services</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #121212;
+            }
+            li {
+                float: left;
+            }
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            li a:hover {
+                background-color: #333;
+            }
+            a {
+                text-decoration: none;
+                color: black;
+            }
+            a:hover {
+                color: blue;
+            }
+            .active {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/first_app/services/" class="active">Services</a></li>
+            <li><a href="/first_app/about/">About</a></li>
+            <li><a href="/first_app/contact/">Contact</a></li>
+        </ul>
+
+        <p>{{ publish_time | timesince }}</p>
+        <p>{{ 'Cloud computing' | truncatechars:6 }}</p>
+        <p>{{ baikka_likha | upper }}</p>
+        <p>{{ baikka_likha | wordcount }}</p><br><br>
+
+        <p>{{ "You can build web apps with python and Django" | truncatewords:5 }}</p>
+        <p>You have {{ num }} message{{ num|pluralize }}.</p>
+        <p>{{ 'Earthly' | make_list }}</p>
+
+        
+        <script src="" async defer></script>
+    </body>
+</html>

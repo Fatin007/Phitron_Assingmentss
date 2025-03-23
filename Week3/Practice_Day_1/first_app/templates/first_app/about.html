@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>About</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #121212;
+            }
+            li {
+                float: left;
+            }
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            li a:hover {
+                background-color: #333;
+            }
+            a {
+                text-decoration: none;
+                color: black;
+            }
+            a:hover {
+                color: blue;
+            }
+            .active {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/first_app/services/">Services</a></li>
+            <li><a href="/first_app/about/"  class="active">About</a></li>
+            <li><a href="/first_app/contact/">Contact</a></li>
+        </ul>
+
+        <h3>Name: {{name}}</h3>
+        <h3>Age: {{age}}</h3>
+        <p>{{days | join:" // "}}</p>
+        <p>{{ date | date:"D d M Y" }}</p>
+        <p>{{ num | add:"10" }}</p>
+        <p>{{ 'fatin' | capfirst }}</p>
+        <p>{{ "Python is not Fun" | cut:" " }}</p>
+        
+        <script src="" async defer></script>
+    </body>
+</html>
